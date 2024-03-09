@@ -4,6 +4,7 @@ body{
   height: 100%;
   background-size: cover;
   background-color: #344e41;
+  /* border: 1px red solid; */
 
   /* a3b18a
   588157
@@ -11,24 +12,30 @@ body{
   344e41 */
 }
 
-
-
-.pure-g {
-    position: absolute;
+.timer {
+    position: absolute; /* Make the timer movable */
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-}
+    transform: translate(-50%, -50%); /* Center initially */
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.5); /* Semi-transparent white */
+    backdrop-filter: blur(10px); /* The frosted glass effect */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    user-select: none; /* Prevent text selection during dragging */
+  }
 
-.pure-u-1-5 {
-    width: 100%;
-}
-
-.square {
-    background-color: #a3b18a;
-    /* border-radius: 1px solid #a3b18a; */
-    height: 100px;
-    width: 100px;
-    /* margin: 1em; */
-}
+  .timer button {
+    background: rgba(255, 255, 255, 0.3); /* Semi-transparent white */
+    backdrop-filter: blur(5px);          /* Softer blur for buttons */
+    border: none;                        /* Remove default border */
+    border-radius: 5px;                  /* Slightly rounded corners */
+    padding: 8px 15px;                   /* Some padding */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: background-color 0.2s;   /* Smooth hover transition */
+  }
+  
+  .timer button:hover {
+    background-color: rgba(255, 255, 255, 0.777);  /* Slightly more opaque on hover */
+  }
 
